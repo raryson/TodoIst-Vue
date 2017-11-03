@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "\u001b[C"
+    "test": "\u001b[C",
+    "start": "index"
   },
   "repository": {
     "type": "git",
