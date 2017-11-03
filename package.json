@@ -15,5 +15,13 @@
   "bugs": {
     "url": "https://github.com/raryson/TodoIst-Vue/issues"
   },
-  "homepage": "https://github.com/raryson/TodoIst-Vue#readme"
+  "homepage": "https://github.com/raryson/TodoIst-Vue#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "mongoose": "^4.13.0",
+    "vue-resource": "^1.3.4"
+  }
 }

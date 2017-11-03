@@ -1,0 +1,45 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://unpkg.com/vue"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        let listClient = <%- JSON.stringify(listClient) %>
+        const objectTrue = [];
+
+        listClient.forEach((value, index) => {
+          if(value.text != null){
+            objectTrue.push({'text' : value.text, 'id': value.id})
+
+          }
+        })
+    </script>
+
+  </head>
+  
+  <div id="header">
+    <h1>{{ message }}</h1>
+  </div>
+  
+  <div id="app">
+     
+    <p>{{message}}</p>
+    <input v-model="message"><button v-on:click = "appendToList(message)">Send</button>
+  
+      
+      <table>
+        <tbody name="fade" is="transition-group">
+     
+          <tr v-for="(todo, index) in todos" v-bind:key="todo.text" class="fade">
+            <td class="word"  > {{ index+1 }}  {{ todo.text }}</td>
+            <td><button v-on:click = "removeFromList(index, todo.id)">Remover da lista</button></td>
+          </tr>
+   
+      </transition-group>
+    </table>
+ 
+  </div>
+  
+ 
+  
+  
+  <script src="js/vue.js"></script>
