@@ -1,0 +1,19 @@
+{
+  "name": "todoist-vue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "\u001b[C"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raryson/TodoIst-Vue.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raryson/TodoIst-Vue/issues"
+  },
+  "homepage": "https://github.com/raryson/TodoIst-Vue#readme"
+}

@@ -1,0 +1,49 @@
+<head>
+  <link rel="stylesheet" type="text/css" href="vue.css">
+  <script src="https://unpkg.com/vue"></script>
+</head>
+
+<div id="app">
+  <p>{{ message }}</p>
+</div>
+
+<div id="app-2">
+  <span v-bind:title="message" v-if="seen">
+    Hover your mouse over me for a few seconds
+    to see my dynamically bound title!
+  </span>
+</div>
+
+<div id="app-3">
+    <transition name="fade">
+        <span v-if="seen">Now you see me</span>
+      </transition>
+  <button v-on:click="seen = !seen">
+    if you click hear this content <<<<<<<<< is disapear
+  </button>
+</div>
+
+<div id="app-4">
+  <p>{{message}}</p>
+  <input v-model="message"><button v-on:click = "appendToList(message)">Send</button>
+
+  <ol>
+      <transition-group name="fade">
+      <li v-for="(todo, index) in todos" v-bind:key="todo.text">
+       
+            <span v-if="seen">
+                {{ todo.text }}   <button v-on:click = "removeFromList(index)">Remover da lista</button>
+            </span>
+     
+      </li>
+    </transition-group>
+  </ol>
+</div>
+
+<div id="app-6">
+    <p>{{ message }}</p>
+    <input v-model="message">
+  </div>
+
+
+<script src="vue.js"></script>
