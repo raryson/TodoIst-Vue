@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "\u001b[C",
-    "start": "index"
+    "start": "node index"
   },
   "repository": {
     "type": "git",
@@ -22,7 +22,7 @@
     "cookie-parser": "^1.4.3",
     "ejs": "^2.5.7",
     "express": "^4.16.2",
-    "mongoose": "^4.13.0",
+    "mongoose": "^4.13.0"
 
   }
 }
