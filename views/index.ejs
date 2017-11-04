@@ -23,17 +23,18 @@
 
 <div id="app">
 
-  <p>{{message}}</p>
-  <input v-model="message">
-  <button v-on:click="appendToList(message)" class="action-button shadow animate send">Send</button>
-
+  <div class="sender">
+    <p>{{message}}</p>
+    <input v-model="message">
+    <button v-on:click="appendToList(message)" class="action-button shadow animate send">Send</button>
+  </div>
 
   <table class="table">
     <tbody name="fade" is="transition-group">
 
       <tr v-for="(todo, index) in todos" v-bind:key="todo.text" class="fade">
         <td>{{ index+1 }}</td>
-        <td >{{ todo.text }}</td>
+        <td>{{ todo.text }}</td>
         <td>
           <button v-on:click="removeFromList(index, todo.id)" class="action-button shadow animate red">Remover da lista</button>
         </td>
