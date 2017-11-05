@@ -1,11 +1,14 @@
 <head>
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <script src="https://unpkg.com/vue"></script>
+  <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
   <script>
     let listClient = <%- JSON.stringify(listClient) %>
-        const objectTrue = [];
+    const objectTrue = [];
 
     listClient.forEach((value, index) => {
       if (value.text != null) {
@@ -17,26 +20,36 @@
 
 </head>
 
-<div id="header">
-  <h1>{{ message }}</h1>
+<div id="header" class="container">
+  <h1 class="title">{{ message }}</h1>
 </div>
 
-<div id="app">
+<div id="app" class="col-md-4 col-md-offset-4">
 
   <div class="sender">
-    <p>{{message}}</p>
-    <input v-model="message">
-    <button v-on:click="appendToList(message)" class="action-button shadow animate send">Send</button>
+    <form class="form-inline">
+      <div class="form-group">
+        <p class="input-container">
+          <input type="text" id="yourText" v-model="message" class="simple-text">
+          <label for="input-username" id="labeltext" unselectable="on">Enter your text here</label>
+        </p>
+      </div>
+      <button v-on:click="appendToList(message)" class="btn btn-primary">Send</button>
+    </form>
+
+    
+
   </div>
 
-  <table class="table">
-    <tbody name="fade" is="transition-group">
 
-      <tr v-for="(todo, index) in todos" v-bind:key="todo.text" class="fade">
-        <td>{{ index+1 }}</td>
-        <td>{{ todo.text }}</td>
-        <td>
-          <button v-on:click="removeFromList(index, todo.id)" class="action-button shadow animate red">Remover da lista</button>
+  <table class="table table-hover">
+    <tbody name="fadee" is="transition-group">
+
+      <tr v-for="(todo, index) in todos" v-bind:key="todo.text" class="fadee">
+        <td class="todo-number">{{ index+1 }}</td>
+        <td class="todo-text">{{ todo.text }}</td>
+        <td class="todo-buttom">
+          <button v-on:click="removeFromList(index, todo.id)" class="btn btn-danger">Remove</button>
         </td>
       </tr>
 
@@ -45,7 +58,5 @@
 
 </div>
 
-
-
-
 <script src="js/vue.js"></script>
+<script src="js/scripts.js"></script>

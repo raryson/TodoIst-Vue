@@ -10,7 +10,7 @@ new Vue({
     el: '#app',
     data: {
       seen: true,
-      message: 'Send something for your list',
+      message: "",
       todos: objectTrue
     },
     methods : {
