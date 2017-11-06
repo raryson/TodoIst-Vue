@@ -2,6 +2,7 @@
 
 $( document ).ready(function() {
 
+
     document.querySelector('#labeltext').addEventListener('click', () => {
         $(".simple-text").focus()
     })
